@@ -1,0 +1,69 @@
+{
+  "name": "@teka/packages",
+  "type": "module",
+  "repository": "null//github.com/marcelotk15/packages",
+  "author": {
+    "name": "Marcelo \"teka\" Oliveira",
+    "email": "me@teka.dev",
+    "url": "https://teka.dev"
+  },
+  "license": "MIT",
+  "private": true,
+  "packageManager": "^pnpm@8.0.0",
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "build": "turbo run build --filter=[\"HEAD^1\"]",
+    "build:all": "turbo run build",
+    "clean": "turbo run clean --filter=[\"HEAD^1\"]",
+    "clean:all": "turbo run clean",
+    "clean:install": "turbo run clean && ./scripts/clean.sh",
+    "format": "pnpm run format:prettier:write",
+    "format:lint": "turbo run format:lint",
+    "format:prettier:base": "prettier . --ignore-unknown",
+    "format:prettier:check": "pnpm format:prettier:base --check",
+    "format:prettier:write": "pnpm format:prettier:base --write",
+    "generate:releaseRules": "node ./packages/semantic/scripts/generateReleaseRules.js && pnpm run format:lint",
+    "lint": "turbo run lint --filter=[\"HEAD^1\"]",
+    "lint:all": "turbo run lint",
+    "lint:packages": "syncpack lint-semver-ranges --config .syncpackrc",
+    "lint:repo": "manypkg check",
+    "postinstall": "is-ci || husky install",
+    "postpublish": "pinst --enable",
+    "preinstall": "npx only-allow pnpm",
+    "prepublishOnly": "pinst --disable",
+    "semantic-release": "pnpm semantic-release:mono",
+    "semantic-release:dry": "pnpm turbo run build --filter=\"@teka/semantic\" && pnpm --filter=\"@teka/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo --dry-run",
+    "semantic-release:mono": "pnpm turbo run build --filter=\"@teka/semantic\" && pnpm --filter=\"@teka/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
+    "test": "turbo run test --filter=[\"HEAD^1\"]",
+    "test:all": "turbo run test"
+  },
+  "dependencies": {
+    "@manypkg/cli": "^0.21.0",
+    "@teka/conventional-gitmoji": "0.0.0",
+    "@teka/eslint-config": "0.0.0",
+    "@teka/lint-staged": "workspace:^",
+    "@teka/prettier-config": "0.0.0",
+    "@teka/tsconfig": "0.0.0",
+    "@types/eslint": "^8.44.2",
+    "@types/is-ci": "^3.0.0",
+    "child_process": "^1.0.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.49.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lint-staged": "13.2.2",
+    "lodash": "^4.17.21",
+    "pinst": "^3.0.0",
+    "prettier": "^3.0.3",
+    "syncpack": "^11.2.1",
+    "tsup": "^7.2.0",
+    "turbo": "^1.10.14",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

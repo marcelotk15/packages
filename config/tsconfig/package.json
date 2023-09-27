@@ -1,0 +1,32 @@
+{
+  "name": "@teka/tsconfig",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "TypeScript Configuration",
+  "repository": "null//github.com/marcelotk15/packages/tree/master/config/tsconfig",
+  "author": {
+    "name": "Marcelo \"teka\" Oliveira",
+    "email": "me@teka.dev",
+    "url": "https://teka.dev"
+  },
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "pnpm run clean && pnpm run copy",
+    "clean": "rm -rf dist",
+    "clean:install": "pnpm run clean && rm -rf node_modules",
+    "copy": "mkdir -p ./dist && ./scripts/copy.sh",
+    "dev": "echo '#tsup-node  --watch'",
+    "format:lint": "pnpm run format:prettier --write",
+    "format:prettier": "prettier \"./src/**/*.{cjs,js,jsx,mjs,ts,tsx,json,md,mdx,css,html,yml,yaml,scss}\" --ignore-unknown --loglevel warn",
+    "lint": "pnpm run format:prettier --check",
+    "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false
+}

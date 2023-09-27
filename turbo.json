@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["scripts/copy.sh", "src/**", "*.cjs", "package.json"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": [],
+      "inputs": ["src/**", "*.cjs", "package.json"]
+    },
+    "format:lint": {
+      "cache": false,
+      "dependsOn": []
+    },
+    "@teka/semantic#build": {
+      "dependsOn": [
+        "@teka/conventional-gitmoji#build"
+      ],
+      "inputs": ["src/**", "*.cjs", "package.json"]
+    }
+  }
+}

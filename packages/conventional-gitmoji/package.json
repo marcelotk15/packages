@@ -1,0 +1,44 @@
+{
+  "name": "@teka/conventional-gitmoji",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Helper package for dual gitmoji / conventional commits",
+  "repository": "null//github.com/marcelotk15/packages/tree/master/packages/conventional-gitmoji",
+  "author": {
+    "name": "Marcelo \"teka\" Oliveira",
+    "email": "me@teka.dev",
+    "url": "https://teka.dev"
+  },
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf dist",
+    "clean:install": "pnpm run clean && rm -rf node_modules",
+    "copy": "mkdir -p ./dist && ./scripts/copy.sh",
+    "dev": "tsup --watch",
+    "format:lint": "pnpm run lint:eslint --fix && pnpm run format:prettier --write",
+    "format:prettier": "prettier \"./src/**/*.{cjs,js,jsx,mjs,ts,tsx,json,md,mdx,css,html,yml,yaml,scss}\" --ignore-unknown --loglevel warn",
+    "generate:types": "node ./scripts/generateTypes.js && pnpm run format:lint",
+    "lint": "pnpm run format:prettier --check && pnpm run lint:eslint",
+    "lint:eslint": "eslint ./src --ext cjs,js,jsx,mjs,ts,tsx --max-warnings=0",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.198",
+    "@types/title": "^3.4.1",
+    "gitmojis": "^3.13.5",
+    "grapheme-splitter": "^1.0.4",
+    "title": "^3.5.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false
+}
