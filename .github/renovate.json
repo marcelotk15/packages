@@ -33,11 +33,7 @@
     },
     {
       "commitMessagePrefix": "⬆️  (deps)",
-      "excludePackageNames": [
-        "eslint-config-next",
-        "eslint-config-turbo",
-        "eslint-plugin-turbo"
-      ],
+      "excludePackageNames": ["eslint-config-next", "eslint-config-turbo", "eslint-plugin-turbo"],
       "groupName": "eslint-config 📏 ",
       "groupSlug": "eslint-config",
       "matchPackageNames": [
@@ -100,11 +96,7 @@
     {
       "assignees": ["marcelotk15"],
       "matchUpdateTypes": ["major"],
-      "labels": [
-        "📦 Dependencies",
-        "📦 Dependencies 💥 Breaking 💥",
-        "🛑️ Do Not Merge"
-      ],
+      "labels": ["📦 Dependencies", "📦 Dependencies 💥 Breaking 💥", "🛑️ Do Not Merge"],
       "reviewers": ["marcelotk15"]
     }
   ],
