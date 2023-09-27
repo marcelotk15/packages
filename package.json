@@ -14,9 +14,9 @@
   },
   "scripts": {
     "dev": "turbo run dev --no-cache --parallel --continue",
-    "build": "turbo run build --filter=[\"HEAD^1\"]",
+    "build": "turbo run build --filter=[HEAD^1]",
     "build:all": "turbo run build",
-    "clean": "turbo run clean --filter=[\"HEAD^1\"]",
+    "clean": "turbo run clean --filter=[HEAD^1]",
     "clean:all": "turbo run clean",
     "clean:install": "turbo run clean && ./scripts/clean.sh",
     "format": "pnpm run format:prettier:write",
@@ -25,7 +25,7 @@
     "format:prettier:check": "pnpm format:prettier:base --check",
     "format:prettier:write": "pnpm format:prettier:base --write",
     "generate:releaseRules": "node ./packages/semantic/scripts/generateReleaseRules.js && pnpm run format:lint",
-    "lint": "turbo run lint --filter=[\"HEAD^1\"]",
+    "lint": "turbo run lint --filter=[HEAD^1]",
     "lint:all": "turbo run lint",
     "lint:packages": "syncpack lint-semver-ranges --config .syncpackrc",
     "lint:repo": "manypkg check",
@@ -36,7 +36,7 @@
     "semantic-release": "pnpm semantic-release:mono",
     "semantic-release:dry": "pnpm turbo run build --filter=\"@teka/semantic\" && pnpm --filter=\"@teka/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo --dry-run",
     "semantic-release:mono": "pnpm turbo run build --filter=\"@teka/semantic\" && pnpm --filter=\"@teka/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "test": "turbo run test --filter=[\"HEAD^1\"]",
+    "test": "turbo run test --filter=[HEAD^1]",
     "test:all": "turbo run test"
   },
   "dependencies": {
@@ -57,9 +57,11 @@
     "lodash": "^4.17.21",
     "pinst": "^3.0.0",
     "prettier": "^3.0.3",
+    "semantic-release": "^22.0.0",
+    "semantic-release-monorepo": "7.0.5",
     "syncpack": "^11.2.1",
     "tsup": "^7.2.0",
-    "turbo": "^1.10.14",
+    "turbo": "1.10.14",
     "typescript": "^5.2.2"
   },
   "publishConfig": {

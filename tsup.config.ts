@@ -1,7 +1,3 @@
-/**
- * @ref(tsup) https://tsup.egoist.dev/
- *
- */
 import { defineConfig, type Options } from 'tsup'
 
 export const config: Options = {

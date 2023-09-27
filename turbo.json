@@ -21,9 +21,7 @@
       "dependsOn": []
     },
     "@teka/semantic#build": {
-      "dependsOn": [
-        "@teka/conventional-gitmoji#build"
-      ],
+      "dependsOn": ["@teka/conventional-gitmoji#build"],
       "inputs": ["src/**", "*.cjs", "package.json"]
     }
   }

@@ -10,10 +10,14 @@ const config = {
       parserOptions: {
         ...baseConfig.overrides[0].parserOptions,
         tsconfigRootDir: __dirname,
-        project: ['./tsconfig.eslint.json', './config/*/tsconfig.json', './packages/*/tsconfig.json'],
+        project: [
+          './tsconfig.eslint.json',
+          './config/*/tsconfig.json',
+          './packages/*/tsconfig.json',
+        ],
       },
     },
-  ]
+  ],
 }
 
 module.exports = config

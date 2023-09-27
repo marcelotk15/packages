@@ -3,12 +3,12 @@ import micromatch from 'micromatch'
 
 const FILE_MAX = 9
 
-const escapedFileNames = (filenames) =>
+const escapedFileNames = (filenames: string[]) =>
   // @note(windows) 🪟 need to escape filenames with `shell-quote`
   filenames.map((filename) => `"${filename}"`).join(' ')
 
 const config = (files) => {
-  if (isCI && files.length > FILE_MAX) {
+  if (!!isCI && files.length > FILE_MAX) {
     return [`pnpm run format:prettier:check`]
   }
 
