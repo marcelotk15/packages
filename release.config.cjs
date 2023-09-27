@@ -16,10 +16,13 @@ const branchTypes = map(releaseBranchTypes, (releaseBranchType, releaseBranchTyp
 
 const branches = [{ name: 'main' }, { name: 'canary', prerelease: 'canary' }, ...branchTypes]
 
+/** @type {import('semantic-release').Options} */
 const config = {
   branches,
+  repositoryUrl: 'https://github.com/marcelotk15/packages.git',
+  extends: ['semantic-release-monorepo'],
   contributorsProhibitList: {
-    email: ['marcelotk_15@hotmail.com'],
+    email: [],
     login: ['marcelotk15'],
   },
 }
