@@ -23,6 +23,9 @@ importers:
       '@teka/prettier-config':
         specifier: 0.0.0
         version: link:config/prettier-config
+      '@teka/semantic':
+        specifier: workspace:*
+        version: link:packages/semantic
       '@teka/tsconfig':
         specifier: 0.0.0
         version: link:config/tsconfig
