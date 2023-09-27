@@ -1,14 +1,17 @@
 {
   "name": "@teka/packages",
   "type": "module",
-  "repository": "marcelotk15/packages.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelotk15/packages.git"
+  },
   "author": {
     "name": "Marcelo \"teka\" Oliveira",
     "email": "me@teka.dev",
     "url": "https://teka.dev"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "packageManager": "^pnpm@8.0.0",
   "engines": {
     "node": ">=16.14.0"
@@ -69,5 +72,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "version": ""
 }

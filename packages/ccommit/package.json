@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "type": "module",
   "description": "😜 ➕ 👔 🟰  ccommit \n  Conventional Commit Generator that interprets commit types from gitmoji and conventional",
-  "repository": "marcelotk15/packages.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelotk15/packages.git"
+  },
   "homepage": "https://github.com/marcelotk15/packages/tree/main/packages/ccommit#readme",
   "author": {
     "name": "Marcelo \"teka\" Oliveira",
@@ -16,7 +19,7 @@
     "node": ">=18.18.0"
   },
   "bin": {
-    "ccommit": "./dist/index.js"
+    "ccommit": "dist/index.js"
   },
   "exports": "./dist/index.js",
   "keywords": [
