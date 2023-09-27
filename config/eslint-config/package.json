@@ -1,5 +1,5 @@
 {
-  "name": "@teka/eslint-config",
+  "name": "@teka15/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "description": "ESLint Configuration",

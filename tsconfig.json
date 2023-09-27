@@ -4,6 +4,6 @@
     "noImplicitAny": false,
     "noEmit": true
   },
-  "extends": "@teka/tsconfig/src/node16.json",
+  "extends": "@teka15/tsconfig/src/node16.json",
   "exclude": []
 }

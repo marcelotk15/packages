@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@teka/prettier-config'),
+  ...require('@teka15/prettier-config'),
 }

@@ -1,4 +1,4 @@
-# @teka/eslint-config
+# @teka15/eslint-config
 
 Custom `eslint-config` setup that can be extended and incorporates:
 
@@ -26,14 +26,14 @@ All currently `cjs` format:
     - `./next` (+ react)
 
 ```sh
-pnpm add @teka/eslint-config --dev
+pnpm add @teka15/eslint-config --dev
 ```
 
 ### Base
 
 ```js
 {
-    "extends": "@teka/eslint-config"
+    "extends": "@teka15/eslint-config"
 }
 ```
 
@@ -41,7 +41,7 @@ pnpm add @teka/eslint-config --dev
 
 ```js
 {
-    "extends": "@teka/eslint-config/next"
+    "extends": "@teka15/eslint-config/next"
 }
 ```
 
@@ -49,7 +49,7 @@ pnpm add @teka/eslint-config --dev
 
 ```js
 {
-    "extends": "@teka/eslint-config/react"
+    "extends": "@teka15/eslint-config/react"
 }
 ```
 
@@ -57,6 +57,6 @@ pnpm add @teka/eslint-config --dev
 
 ```js
 {
-    "extends": "@teka/eslint-config/typescript"
+    "extends": "@teka15/eslint-config/typescript"
 }
 ```

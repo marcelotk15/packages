@@ -1,4 +1,4 @@
-# @teka/lint-staged
+# @teka15/lint-staged
 
 Custom `lint-staged` setup that can be extended and incorporates:
 
@@ -7,7 +7,7 @@ Custom `lint-staged` setup that can be extended and incorporates:
 ## lint-staged.config
 
 ```sh
-import config from '@teka/lint-staged'
+import config from '@teka15/lint-staged'
 
 export default config
 ```

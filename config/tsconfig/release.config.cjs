@@ -7,4 +7,19 @@ const rootDir = path.join(__dirname, '../../')
 
 const { config: configDefault } = require(path.join(rootDir, 'release.config.cjs'))
 
-const {} = require('@teka/semantic')
+const { name } = require('./package.json')
+
+const branches = [
+  ...configDefault.branches,
+  { name: 'feat/config-canary', prerelease: 'canary' },
+]
+
+const configPassed = {
+  ...configDefault,
+  branches,
+  tagFormat: `${name}@\${version}`,
+}
+
+const config = getConfig(configPassed)
+
+module.exports = config

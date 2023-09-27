@@ -4,7 +4,7 @@ const isCI = require('is-ci')
 
 const { config: monoConfig } = require('../../release.config.cjs')
 
-const { getConfig } = require('@teka/semantic')
+const { getConfig } = require('@teka15/semantic')
 
 const { name } = require('./package.json')
 

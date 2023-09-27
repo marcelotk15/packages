@@ -1,5 +1,5 @@
 {
-  "name": "@teka/release-notes-generator",
+  "name": "@teka15/release-notes-generator",
   "version": "0.0.0",
   "type": "module",
   "description": "Custom Release Note Generator for Semantic Release.",

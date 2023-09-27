@@ -1,4 +1,4 @@
-# @teka/conventional-gitmoji
+# @teka15/conventional-gitmoji
 
 1. 🌉️ A bridge between `gitmoji` and `conventional-commits` configured for `semantic-release`.
 2. 🛠️ A `conventional-changelog` plugin for `semantic-release`.
@@ -6,17 +6,17 @@
 ## Usage
 
 ```sh
-pnpm install @teka/conventional-gitmoji
+pnpm install @teka15/conventional-gitmoji
 ```
 
 ```ts
-import { releaseRules, typeSpecs, types } from '@teka/conventional-gitmoji`
+import { releaseRules, typeSpecs, types } from '@teka15/conventional-gitmoji`
 ```
 
 - `releaseRules`: informs `@semantic-release/commit-analyzer`
-- `typeSpecs`: informs `@teka/release-notes-generator` (via `writerOpts`)
+- `typeSpecs`: informs `@teka15/release-notes-generator` (via `writerOpts`)
 - `@hack`: This informs three different ways to ensure we catch the change from `gitmoji` to `conventional`
-- `types`: informs `@teka/git-cz` for the `gitmoji` theme.
+- `types`: informs `@teka15/git-cz` for the `gitmoji` theme.
 
 ### Commit Analyzer
 
@@ -24,7 +24,7 @@ import { releaseRules, typeSpecs, types } from '@teka/conventional-gitmoji`
   [
     '@semantic-release/commit-analyzer',
     {
-      config: '@teka/conventional-gitmoji',
+      config: '@teka15/conventional-gitmoji',
       releaseRules,
     },
   ]
@@ -34,9 +34,9 @@ import { releaseRules, typeSpecs, types } from '@teka/conventional-gitmoji`
 
 ```sh
   [
-    '@teka/release-notes-generator',
+    '@teka15/release-notes-generator',
     {
-      config: '@teka/conventional-gitmoji',
+      config: '@teka15/conventional-gitmoji',
     },
   ]
 ```
@@ -71,7 +71,7 @@ This expands on the original `conventional-commits` nomenclature to account for 
 
 ### 🚀️ semantic-release
 
-Adds `semver` to each type to inform `@teka/semantic` how to handle each commit type (and if it is a convential branch type).
+Adds `semver` to each type to inform `@teka15/semantic` how to handle each commit type (and if it is a convential branch type).
 
 **⚗️ Example(s):**
 

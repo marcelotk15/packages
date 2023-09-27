@@ -1,4 +1,4 @@
-# @teka/prettier-config
+# @teka15/prettier-config
 
 Quick prettier config to share across
 
@@ -6,6 +6,6 @@ Quick prettier config to share across
 
 ```js
 module.exports = {
-  ...require('@teka/prettier-config'),
+  ...require('@teka15/prettier-config'),
 }
 ```

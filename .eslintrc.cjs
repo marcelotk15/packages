@@ -1,8 +1,8 @@
-const baseConfig = require('@teka/eslint-config/src/react.cjs')
+const baseConfig = require('@teka15/eslint-config/src/react.cjs')
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
-  extends: ['@teka/eslint-config/src/base.cjs'],
+  extends: ['@teka15/eslint-config/src/base.cjs'],
   root: true,
   overrides: [
     {

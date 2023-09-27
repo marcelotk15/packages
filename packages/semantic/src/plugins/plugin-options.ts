@@ -7,9 +7,7 @@ import { git } from './git'
 import { github } from './github'
 import { npm } from './npm'
 
-import { parserOpts, writerOpts } from '@teka/conventional-gitmoji'
-
-// import { parserOpts, writerOpts } from '@teka/conventional-gitmoji'
+import { parserOpts, writerOpts } from '@teka15/conventional-gitmoji'
 
 export interface PluginOptions extends GitPluginOptions, GithubPluginOptions, NPMPluginOptions {
   enableGit?: boolean
@@ -46,9 +44,9 @@ export const getPluginOptions = (optionsPassed?: PluginOptions): PluginSpec[] =>
   ]
 
   const releaseNotesCustomConfig: PluginSpec = [
-    '@teka/release-notes-generator',
+    '@teka15/release-notes-generator',
     {
-      config: '@teka/conventional-gitmoji',
+      config: '@teka15/conventional-gitmoji',
     },
   ]
 

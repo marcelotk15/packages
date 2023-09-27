@@ -1,4 +1,4 @@
-// @todo(ccommit) cache + generation from: @teka/conventional-gitmoji
+// @todo(ccommit) cache + generation from: @teka15/conventional-gitmoji
 import { SEMVER } from '~ccommit/lib/index.js'
 
 // @hack(ccommit) emojiLength is to help with formatting until can do it programmatically

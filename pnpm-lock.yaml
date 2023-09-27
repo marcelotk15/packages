@@ -11,25 +11,25 @@ importers:
       '@manypkg/cli':
         specifier: ^0.21.0
         version: 0.21.0
-      '@teka/conventional-gitmoji':
+      '@teka15/conventional-gitmoji':
         specifier: 0.0.0
         version: link:packages/conventional-gitmoji
-      '@teka/eslint-config':
+      '@teka15/eslint-config':
         specifier: 0.0.0
         version: link:config/eslint-config
-      '@teka/lint-staged':
+      '@teka15/lint-staged':
         specifier: workspace:^
         version: link:config/lint-staged
-      '@teka/prettier-config':
+      '@teka15/prettier-config':
         specifier: 0.0.0
         version: link:config/prettier-config
-      '@teka/release-notes-generator':
+      '@teka15/release-notes-generator':
         specifier: workspace:*
         version: link:packages/release-notes-generator
-      '@teka/semantic':
+      '@teka15/semantic':
         specifier: workspace:*
         version: link:packages/semantic
-      '@teka/tsconfig':
+      '@teka15/tsconfig':
         specifier: 0.0.0
         version: link:config/tsconfig
       '@types/eslint':

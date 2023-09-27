@@ -1,5 +1,5 @@
 {
-  "name": "@teka/semantic",
+  "name": "@teka15/semantic",
   "version": "0.0.0",
   "type": "module",
   "description": "Semantic Versioning, Conventional Commits with CI/CD for GitHub Actions.",

@@ -2,7 +2,7 @@ const isCI = require('is-ci')
 !isCI && require('dotenv').config({ path: '../../.env' })
 
 const { config: configDefault } = require('../../release.config.cjs')
-const { getConfig } = require('@teka/semantic')
+const { getConfig } = require('@teka15/semantic')
 
 const { name } = require('./package.json')
 

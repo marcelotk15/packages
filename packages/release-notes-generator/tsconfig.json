@@ -10,7 +10,7 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "extends": "@teka/tsconfig/src/node14.json",
+  "extends": "@teka15/tsconfig/src/node14.json",
   "include": ["src"],
   "exclude": ["node_modules"]
 }

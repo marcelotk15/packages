@@ -20,8 +20,8 @@
       "cache": false,
       "dependsOn": []
     },
-    "@teka/semantic#build": {
-      "dependsOn": ["@teka/conventional-gitmoji#build", "@teka/release-notes-generator#build"],
+    "@teka15/semantic#build": {
+      "dependsOn": ["@teka15/conventional-gitmoji#build", "@teka15/release-notes-generator#build"],
       "inputs": ["src/**", "*.cjs", "package.json"]
     }
   }

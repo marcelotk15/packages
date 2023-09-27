@@ -1,5 +1,5 @@
 {
-  "name": "@teka/conventional-gitmoji",
+  "name": "@teka15/conventional-gitmoji",
   "version": "0.0.0",
   "type": "module",
   "description": "Helper package for dual gitmoji / conventional commits",

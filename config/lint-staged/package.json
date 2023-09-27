@@ -1,5 +1,5 @@
 {
-  "name": "@teka/lint-staged",
+  "name": "@teka15/lint-staged",
   "version": "0.0.0",
   "type": "module",
   "description": "Lint Staged Configuration",

@@ -1,4 +1,4 @@
-# @teka/tsconfig
+# @teka15/tsconfig
 
 Custom `tsconfig` setup that can be extended.
 
@@ -12,7 +12,7 @@ All currently `cjs` format:
 - `./node16`
 
 ```sh
-pnpm add @teka/tsconfig --dev
+pnpm add @teka15/tsconfig --dev
 ```
 
 ### Example
@@ -20,7 +20,7 @@ pnpm add @teka/tsconfig --dev
 ```json
 {
   // ...
-  "extends": "@teka/tsconfig/node14.json"
+  "extends": "@teka15/tsconfig/node14.json"
   // ...
 }
 ```
