@@ -19,7 +19,7 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf .turbo && rm -rf dist",
+    "clean": "rm -rf dist",
     "clean:install": "pnpm run clean && rm -rf node_modules",
     "copy": "mkdir -p ./dist && ./scripts/copy.sh",
     "dev": "tsup --watch",

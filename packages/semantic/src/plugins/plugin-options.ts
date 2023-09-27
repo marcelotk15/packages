@@ -7,6 +7,8 @@ import { git } from './git'
 import { github } from './github'
 import { npm } from './npm'
 
+import { parserOpts, writerOpts } from '@teka/conventional-gitmoji'
+
 // import { parserOpts, writerOpts } from '@teka/conventional-gitmoji'
 
 export interface PluginOptions extends GitPluginOptions, GithubPluginOptions, NPMPluginOptions {
@@ -34,21 +36,21 @@ export const getPluginOptions = (optionsPassed?: PluginOptions): PluginSpec[] =>
     ...optionsPassed,
   }
 
-  // const releaseNotesConfig = [
-  //   '@semantic-release/release-notes-generator',
-  //   {
-  //     config: '@teka/conventional-gitmoji',
-  //     parserOpts,
-  //     writerOpts,
-  //   },
-  // ]
+  const releaseNotesConfig: PluginSpec = [
+    '@semantic-release/release-notes-generator',
+    {
+      config: '@teka/conventional-gitmoji',
+      parserOpts,
+      writerOpts,
+    },
+  ]
 
-  // const releaseNotesCustomConfig = [
-  //   '@teka/release-notes-generator',
-  //   {
-  //     config: '@teka/conventional-gitmoji',
-  //   },
-  // ]
+  const releaseNotesCustomConfig: PluginSpec = [
+    '@teka/release-notes-generator',
+    {
+      config: '@teka/conventional-gitmoji',
+    },
+  ]
 
   const { npmPublish, pkgRoot, tarballDir } = options
 
@@ -84,8 +86,8 @@ export const getPluginOptions = (optionsPassed?: PluginOptions): PluginSpec[] =>
 
   const plugins = [
     commitAnalyzer(options.releaseRules),
-    // options.enableReleaseNotes ? releaseNotesConfig : '',
-    // options.enableReleaseNotesCustom ? releaseNotesCustomConfig : '',
+    options.enableReleaseNotes ? releaseNotesConfig : '',
+    options.enableReleaseNotesCustom ? releaseNotesCustomConfig : '',
     options.enableNpm ? npmConfig : '',
     options.enableGithub ? githubConfig : '',
     options.enableGit ? gitConfig : '',

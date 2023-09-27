@@ -15,7 +15,7 @@ import { releaseRules, typeSpecs, types } from '@teka/conventional-gitmoji`
 
 - `releaseRules`: informs `@semantic-release/commit-analyzer`
 - `typeSpecs`: informs `@teka/release-notes-generator` (via `writerOpts`)
-  - `@hack`: This informs three different ways to ensure we catch the change from `gitmoji` to `conventional`
+- `@hack`: This informs three different ways to ensure we catch the change from `gitmoji` to `conventional`
 - `types`: informs `@teka/git-cz` for the `gitmoji` theme.
 
 ### Commit Analyzer
