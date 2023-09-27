@@ -1,7 +1,6 @@
 {
   "name": "@teka/packages",
   "type": "module",
-  "repository": "null//github.com/marcelotk15/packages",
   "author": {
     "name": "Marcelo \"teka\" Oliveira",
     "email": "me@teka.dev",

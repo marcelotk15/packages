@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "description": "Prettier Configuration",
-  "repository": "null//github.com/marcelotk15/packages/tree/master/config/prettier-config",
+  "repository": "marcelotk15/packages.git",
   "author": {
     "name": "Marcelo \"teka\" Oliveira",
     "email": "me@teka.dev",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "prettier": "^3.0.3",
-    "prettier-plugin-pkg": "0.17.1",
+    "prettier-plugin-pkg": "0.18.0",
     "prettier-plugin-tailwindcss": "0.3.0"
   },
   "publishConfig": {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "description": "ESLint Configuration",
-  "repository": "null//github.com/marcelotk15/packages/tree/master/config/eslint-config",
+  "repository": "marcelotk15/packages.git",
   "author": {
     "name": "Marcelo \"teka\" Oliveira",
     "email": "me@teka.dev",
