@@ -12,25 +12,25 @@ importers:
         specifier: ^0.21.0
         version: 0.21.0
       '@teka15/conventional-gitmoji':
-        specifier: 0.0.0
+        specifier: workspace:^
         version: link:packages/conventional-gitmoji
       '@teka15/eslint-config':
-        specifier: 0.0.0
+        specifier: workspace:^
         version: link:config/eslint-config
       '@teka15/lint-staged':
         specifier: workspace:^
         version: link:config/lint-staged
       '@teka15/prettier-config':
-        specifier: 0.0.0
+        specifier: workspace:^
         version: link:config/prettier-config
       '@teka15/release-notes-generator':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/release-notes-generator
       '@teka15/semantic':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/semantic
       '@teka15/tsconfig':
-        specifier: 0.0.0
+        specifier: workspace:^
         version: link:config/tsconfig
       '@types/eslint':
         specifier: ^8.44.2
