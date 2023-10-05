@@ -39,7 +39,7 @@
     "prepublishOnly": "pinst --disable",
     "semantic-release": "pnpm semantic-release:mono",
     "semantic-release:dry": "pnpm turbo run build --filter=\"@teka15/semantic\" && pnpm --filter=\"@teka15/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --dry-run",
-    "semantic-release:mono": "pnpm turbo run build --filter=\"@teka1515/semantic\" && pnpm --filter=\"@teka15/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release",
+    "semantic-release:mono": "pnpm turbo run build --filter=\"@teka15/semantic\" && pnpm --filter=\"@teka15/*\" --filter=\"ccommit\" -r --workspace-concurrency=1 exec -- npx --no-install semantic-release",
     "test": "turbo run test --filter=[HEAD^1]",
     "test:all": "turbo run test"
   },
