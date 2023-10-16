@@ -38,24 +38,17 @@ const config = {
       'warn',
       {
         groups: [
-          // Packages and side effect imports.
-          ['^~?\\w', '^\\u0000'],
-          // Components and providers.
-          ['^`~/components', '^~/providers'],
-          // Hooks
-          ['^~/hooks'],
-          // Utils, helpers, and lib
-          ['^~/utils', '^~/helpers', '^~/lib'],
-          // Other absolute imports.
-          ['^~/'],
-          // Relative imports.
-          ['^\\.'],
-          // Import type and types.
-          ['^.*\\u0000$', '^@/types'],
-          // Styles.
-          ['^.+\\.s?css$'],
-          // Anything not matched in another group.
-          ['^'],
+          // Packages `react` related packages come first.
+          ['^react', '^@?\\w'],
+          ['^(@|~)(/.*|$)'],
+          // Side effect imports.
+          ['^\\u0000'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports.
+          ['^.+\\.?(css)$'],
         ],
       },
     ],
